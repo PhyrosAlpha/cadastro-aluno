@@ -154,6 +154,7 @@ public class MainView extends JFrame {
 		dispose();
 		try {
 			CadastroAluno telaCadastroAluno = new CadastroAluno();
+			telaCadastroAluno.setBounds(this.getBounds());
 			telaCadastroAluno.setVisible(true);
 		} catch (ParseException e1) {
 			// TODO Auto-generated catch block
@@ -165,6 +166,7 @@ public class MainView extends JFrame {
 		dispose();
 		try {
 			ConsultaAluno telaConsultaAluno = new ConsultaAluno();
+			telaConsultaAluno.setBounds(this.getBounds());
 			telaConsultaAluno.setVisible(true);
 		} catch (ParseException e1) {
 			// TODO Auto-generated catch block

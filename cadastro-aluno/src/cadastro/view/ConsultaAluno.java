@@ -213,6 +213,7 @@ public class ConsultaAluno extends JFrame {
 				dispose();
 				try {
 					MainView main = new MainView();
+					main.setBounds(getBounds());
 					setVisible(false);
 					main.setVisible(true);
 				} catch (ParseException e1) {
