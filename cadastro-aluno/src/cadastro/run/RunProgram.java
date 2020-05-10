@@ -1,5 +1,7 @@
-package cadastro.view;
+package cadastro.run;
 import java.awt.EventQueue;
+
+import cadastro.view.MainView;
 
 public class RunProgram {
 
