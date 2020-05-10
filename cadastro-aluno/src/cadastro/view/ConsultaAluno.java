@@ -175,6 +175,8 @@ public class ConsultaAluno extends JFrame {
 	private JLabel lblrea;
 	private JTextField txtFormacao;
 	private JTextField txtArea;
+	private JMenuItem mntmTutorial;
+	private MainViewHelp ajuda;
 	
 
 	public ConsultaAluno() throws ParseException {
@@ -259,6 +261,23 @@ public class ConsultaAluno extends JFrame {
 			}
 		});
 		menuBar.add(mnAjuda);
+		
+		mntmTutorial = new JMenuItem("Tutorial");
+		mntmTutorial.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ajuda = new MainViewHelp();
+				ajuda.txtHelp.setText("Nesta sessão é realizada a consulta dos alunos cadastrados com os seguintes recursos:"
+									+ "\n-Consultar um aluno pelo rgm"
+									+ "\n-Ao consultar alterar os dados"
+									+ "\n-Dados pessoais podem ser alterados"
+									+ "\n-Matricular o aluno em discplinas"
+									+ "\n-Alterar as notas e faltas e o status da disciplina"
+									+ "\n-Existe um boletim com as notas de todas as discplinas  do aluno");
+				ajuda.setVisible(true);
+				
+			}
+		});
+		mnAjuda.add(mntmTutorial);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

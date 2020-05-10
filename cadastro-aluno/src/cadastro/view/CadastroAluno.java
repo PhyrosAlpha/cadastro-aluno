@@ -101,6 +101,8 @@ public class CadastroAluno extends JFrame {
 	private List<Curso> listaCurso;
 	private AlunoCursoDao alunoCursoDao;
 	private JLabel lblChecagem;
+	private JMenuItem mntmTutoral;
+	private MainViewHelp ajuda;
 	
 
 	
@@ -182,6 +184,20 @@ public class CadastroAluno extends JFrame {
 			}
 		});
 		menuBar.add(mnAjuda);
+		
+		mntmTutoral = new JMenuItem("Tutorial");
+		mntmTutoral.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ajuda = new MainViewHelp();
+				ajuda.txtHelp.setText("Nesta sessão é realizada o cadastro de alunos, seguindo as etapas:"
+						+ "\n-Preencher todos os dados inclusive o rgm"
+						+ "\n-No campo rgm existe um indicador se o mesmo rgm ditado já foi cadastrado"
+						+ "\n-Escolher o curso, periodo e unidade"
+						+ "\n-Apertar no botão que indica confirmação");
+				ajuda.setVisible(true);
+			}
+		});
+		mnAjuda.add(mntmTutoral);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

@@ -46,6 +46,8 @@ public class MainView extends JFrame {
 	private JLabel lblOlUsurioO;
 	private JLabel lblCadastrarUmNovo;
 	private JLabel lblNewLabel;
+	private JMenuItem mntAjuda;
+	private MainViewHelp ajuda;
 
 	/**
 	 * Launch the application.
@@ -107,10 +109,24 @@ public class MainView extends JFrame {
 		mnAjuda = new JMenu("Ajuda");
 		mnAjuda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 					
 			}
 		});
 		menuBar.add(mnAjuda);
+		
+		mntAjuda = new JMenuItem("Tutorial");
+		mntAjuda.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+					ajuda = new MainViewHelp();
+					ajuda.txtHelp.setText("Nesta sessão é possível clicar no botão a esquerda para adicionar "
+							+ "\num novo aluno no banco de dados ou no botão a direita para "
+							+ "\nconsultar ou alterar os dados dos alunos.");
+					ajuda.setVisible(true);
+		
+			}
+		});
+		mnAjuda.add(mntAjuda);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
