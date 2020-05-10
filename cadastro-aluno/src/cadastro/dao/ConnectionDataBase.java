@@ -5,13 +5,11 @@ import java.sql.Connection;
 
 public class ConnectionDataBase {
 	
-	
-
 	public static Connection getConnection() throws Exception {	
 		try {
 			
 			String login = "root";
-			String senha = "yugioh22";
+			String senha = "digite-a-senha-aqui";
 			String driver = "com.mysql.jdbc.Driver";
 			String url = "jdbc:mysql://localhost:3306/cadastro_aluno";
 			Class.forName(driver);

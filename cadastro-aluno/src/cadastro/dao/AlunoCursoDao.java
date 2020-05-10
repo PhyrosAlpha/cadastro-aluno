@@ -13,7 +13,7 @@ import cadastro.model.Matricula;
 public class AlunoCursoDao {
 	private Connection conn;
 	private PreparedStatement ps;
-	private ResultSet rs;
+//	private ResultSet rs;
 	
 	
 	public AlunoCursoDao() throws Exception {

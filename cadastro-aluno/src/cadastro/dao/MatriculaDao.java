@@ -140,11 +140,7 @@ public class MatriculaDao {
 			
 
 		}catch(Exception e) {
-			throw new Exception("Erro AlunoDao - excluirDisciplina " + e.getMessage());	
-				
-		}
-			
+			throw new Exception("Erro AlunoDao - excluirDisciplina " + e.getMessage());					
+		}		
 	}
-
-	
 }
